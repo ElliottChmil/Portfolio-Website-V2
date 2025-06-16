@@ -1,0 +1,272 @@
+/* Reset and Base Styles */
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+:root {
+  --battleship-gray: rgba(185, 199, 204, 0.584);
+  --baby-powder: #fffffcff;
+  --oxford-blue: #011936ff;
+  --amber: #f2bb05ff;
+  --cinnabar: #e94f37ff;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--baby-powder);
+  color: var(--oxford-blue);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+main {
+  padding: 2rem;
+  margin-top: 8vh;
+}
+
+section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 8vh;
+}
+
+h1, h2, h3, h4 {
+  color: var(--oxford-blue);
+  margin-bottom: 0.5em;
+}
+
+/* Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--oxford-blue);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--baby-powder);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  padding: 0.4rem;
+  margin-left: auto;
+  justify-content: space-around;
+}
+
+nav a {
+  color: var(--baby-powder);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: var(--cinnabar);
+  transition: color 0.3s ease;
+}
+
+/* About Section */
+#about img {
+  width: 250px;
+  height: auto;
+  border-radius: 15%;
+  margin-right: 2rem;
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#about h1 {
+    font-size: 3rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+/* Education Section */
+
+#education {
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05); /* subtle shadow */
+  background-color: var(--battleship-gray);
+  border-radius: 10px;
+}
+
+#education p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#education h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+#education ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+#education li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Experience Section */
+
+#experience {
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  background-color: var(--battleship-gray);
+}
+
+#experience h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #011936; /* Oxford Blue */
+}
+
+.job {
+  margin-bottom: 2rem;
+}
+
+.job h3 {
+  font-size: 1.25rem;
+  margin: 0.25rem 0;
+}
+
+.job h3:first-of-type {
+    margin-right: 4rem;
+}
+
+.job h3:nth-of-type(2) {
+    margin-right: 4rem;
+}
+
+.job p {
+  margin: 0.25rem 0;
+  color: --oxford-blue;
+  font-size: 1.25rem;
+}
+
+.job ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.job li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* The .in-line class to keep items on the same line */
+.in-line {
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: top;
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.skills-list li {
+  background-color: var(--battleship-gray);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Projects Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+input, textarea, button {
+  padding: 0.8rem;
+  border: 1px solid var(--battleship-gray);
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--oxford-blue);
+  color: var(--baby-powder);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cinnabar);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about img {
+    margin: 0 0 1rem 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--oxford-blue);
+  color: var(--baby-powder);
+}
