@@ -202,6 +202,15 @@ nav a:hover {
 }
 
 /* Skills Section */
+#skills {
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  background-color: var(--battleship-gray);
+}
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +231,40 @@ nav a:hover {
   gap: 1rem;
 }
 
+#projects {
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  background-color: var(--battleship-gray);
+}
+
+/* Campus Involvment */
+
+#campus {
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  background-color: var(--battleship-gray);
+}
+
+#campus ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom : 0.5rem;
+}
+
 /* Contact Form */
+.email {
+  padding-top: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -245,6 +287,27 @@ button {
 
 button:hover {
   background-color: var(--cinnabar);
+}
+
+#contact .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 3rem;
+  color: var(--oxford-blue);
+}
+
+#contact i {
+  color: var(--oxford-blue);
+  transition: transform 0.2s ease;
+}
+
+#contact i:hover {
+  transform: scale(1.1);
+}
+
+#contact i, .divider {
+  vertical-align: middle;
 }
 
 /* Responsive */
